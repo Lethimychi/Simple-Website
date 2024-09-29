@@ -1,0 +1,65 @@
+git <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1 style="margin-bottom: 15px;">Create Account</h1>
+                <input type="text" name="UserName" id="" required placeholder="UserName  (Email or PhoneNumber)" >
+                <input type="text" name="Name" id="" required placeholder="Name">
+                <input type="password" name="Password" required placeholder="Password" />
+                <input type="password" name="RePassword" required placeholder="RePassword" />
+                <button class="form-ghost">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1 style="margin-bottom: 15px;">Sign in</h1>
+                <input type="text" name="UserName" id="" placeholder="UserName">
+                <input type="password" name="Password" placeholder="Password" />
+                <button class="form-ghost">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <div class="overlay-left-content">
+                        <h1>Welcome back 👋</h1>
+                        <p style="margin: 15px;">Already have an account?</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <div class="overlay-right-content">
+                        <h1>Hello, Friend!</h1>
+                        <p style="margin: 15px;" >Don't have an account?</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+        });
+       
+
+    </script>
+</body>
+</html>
